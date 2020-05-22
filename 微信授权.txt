@@ -1,0 +1,8 @@
+第一步：用户同意授权，获取code
+https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxf1c6e14ef3015e54&redirect_uri=http://sellcyb.nat300.top/sell/weixin/auth&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect
+如果将snsapi_base改成snsapi_infosnsapi_userinfo （弹出授权页面，可通过openid拿到昵称、性别、所在地。并且， 即使在未关注的情况下，只要用户授权，也能获取其信息 ）
+第二步：通过code换取网页授权access_token
+https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxf1c6e14ef3015e54&secret=0074603ce88b75ab19ce2bc872b80c2c&code=CODE&grant_type=authorization_code
+Debug结果
+{"access_token":"32_hACBK6xqOX6GgdMdhbMX155Wt9KFNn_w-QoYl6WhE9094UOL_VL7kLbevZKQBgVDCnBh05ACbTIYRauc5h4jA7LfVQGnH4jAKgi8lZF3oO4","expires_in":7200,"refresh_token":"32_2SKVZXaTj_B-pDNurKWalUjsDfeenCtRH4SuXaGlFkjy1AhJIpWaGImbVYyw-n9bVgheCwjr_xfYHExS1T7OyZC2NxNmhyoT-iBhdByyYh0","openid":"o2pLr1EPJ1YcN3Tzo_KvuH7-MRcI","scope":"snsapi_base"}
+！！！最终得到openid":"o2pLr1EPJ1YcN3Tzo_KvuH7-MRcI"
