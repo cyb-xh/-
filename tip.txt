@@ -1,0 +1,28 @@
+netstat -ano|findstr "3306"重启端口
+虚拟机ip:192.168.0.103
+本机ip:192.168.0.107
+
+日志框架：日志门面SLF4j+日志实现Logback
+如果不想每次都写private  final Logger logger = LoggerFactory.getLogger(当前类名.class); 可以用注解@Slf4j;(加入lombok依赖，安装lombok插件)
+
+
+坑
+spirng2.xx以上的配置文件不能以驼峰的形式，要以-分割，如my-appid
+每次虚拟机ip地址变了的话，要改.yml文件，数据库连接，.host文件
+springboot 2.4的freemarker要在配置文件里添加suffix=.ftl的版本
+
+往mysql插入时间问题？
+    @CreationTimestamp
+    private Date createTime;
+
+    //更新时间
+//    @LastModifiedDate
+    @UpdateTimestamp
+    private Date updateTime;
+
+@Column(nullable = false, updatable = false)
+解决第二次插入创建时间变为null
+
+alt+ctrl+B 查看实现类
+
+natapp -authtoken=7223de49a66bfa47
