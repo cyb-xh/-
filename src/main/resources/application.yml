@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.0.106/sell?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  freemarker:
+    suffix: .ftl
+  redis:
+    host: 192.168.0.106
+    port: 6379
+    password:
+server:
+  servlet:
+    context-path: /sell
+wechat:
+  mp-appId: wxf1c6e14ef3015e54
+  mp-appSecret: 0074603ce88b75ab19ce2bc872b80c2c
+  open-appId: wxf1c6e14ef3015e54
+  open-appSecret: 0074603ce88b75ab19ce2bc872b80c2c
+  mch_id: 1483469312
+  mch-key: c976503d34ca432c601361f969fd8d85
+  key-path: /var/weixin_cert/h5.p12
+  notify-url: http://sellcyb.nat300.top/sell/pay/notify
+#  templateId: udbwFy5IY09FEh_XPqLz8nlobENqGSg5t6pZhcXrljg
+project-url:
+  wechat-mpAuthorize: http://sellcyb.nat300.top
+  wechat-openAuthorize: http://sellcyb.nat300.top
+  sell: http://sellcyb.nat300.top
+
+
